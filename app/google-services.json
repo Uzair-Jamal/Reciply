@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "769813469196",
+    "project_id": "recipely-81a0e",
+    "storage_bucket": "recipely-81a0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769813469196:android:37caac67a96137e5c37629",
+        "android_client_info": {
+          "package_name": "com.food.reciply"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769813469196-dm1sumo8c53fbc22tob4j35sr0h4c3to.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.food.reciply",
+            "certificate_hash": "2e09cdb103d1b0011ee02aa309e846a05ef06f19"
+          }
+        },
+        {
+          "client_id": "769813469196-js1qeekc58o1irhud0gbfu1m9n2kukia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC36lb9BRXyMG2R_t4-VJyxoQ4jh1xex08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769813469196-js1qeekc58o1irhud0gbfu1m9n2kukia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
