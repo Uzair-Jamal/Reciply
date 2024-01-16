@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Reciply</string>
+    <string name="terms_services">By continuing, you agree to the <font color="#042628">Terms of Services</font> &amp; <font color="#042628">Privacy Policy</font></string>
 </resources>
