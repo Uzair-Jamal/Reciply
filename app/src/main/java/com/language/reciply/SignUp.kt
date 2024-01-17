@@ -14,32 +14,31 @@ import com.google.firebase.ktx.Firebase
 class SignUp : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
     private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        auth = Firebase.auth
 
         binding.signupBtn.setOnClickListener {
-            startActivity(Intent(this,Login::class.java))
-            finish()
+            val email = binding.email.text.toString()
+            val password = binding.password.text.toString()
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful){
+                        startActivity(Intent(this,Login::class.java))
+                        finish()
+                    }
+                    else {
+                        Toast.makeText(
+                            baseContext,"Authentication failed.",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
         }
-        val email = binding.email.text.toString()
-        val password = binding.password.text.toString()
-
-        auth = Firebase.auth
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful){
-                    val user = auth.currentUser
-                }
-                else {
-                    Toast.makeText(
-                        baseContext,"Authentication failed.",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-            }
-
     }
 }

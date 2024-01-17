@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="resetEmail">Enter your email and we will send you a link to reset your password</string>
+</resources>
