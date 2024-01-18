@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.language.reciply.VerifyAccount"
+    android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomBar"
+            android:layout_marginTop="20dp"
+
+            tools:ignore="ScrollViewCount,UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/otp_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:lineSpacingExtra="5sp"
+                            android:text="We have already sent you a verification e-mail to jhon@gmail.com, please check it"
+                            android:textColor="#767d87"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <com.chaos.view.PinView
+                            android:id="@+id/otp_pinView"
+                            style="@style/PinWidget.PinView"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_below="@id/otp_tv"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginEnd="20dp"
+                            android:elevation="10dp"
+                            android:inputType="number"
+                            android:itemBackground="#e6ebf2"
+                            android:text="5"
+                            android:textColor="#042628"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:itemHeight="60dp"
+                            app:itemRadius="10dp"
+                            app:itemSpacing="40dp"
+                            app:itemWidth="60dp"
+                            app:lineColor="#e6ebf2"
+                            app:viewType="rectangle" />
+                </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+                <Button
+                    android:id="@+id/confirmBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#042628"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="Confirm"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/resend_code_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Resend Code"
+                    android:layout_below="@id/confirmBtn"
+                    android:gravity="center_horizontal"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#042628"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    />
+
+        </RelativeLayout>
+
+</RelativeLayout>
+
