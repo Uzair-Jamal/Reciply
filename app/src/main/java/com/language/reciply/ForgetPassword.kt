@@ -5,12 +5,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.food.reciply.databinding.ActivityForgetPasswordBinding
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.core.FirestoreClient
 import com.google.firebase.ktx.Firebase
 import kotlin.random.Random
+
+
+
+
 
 class ForgetPassword : AppCompatActivity() {
     private lateinit var binding: ActivityForgetPasswordBinding
@@ -33,7 +39,7 @@ class ForgetPassword : AppCompatActivity() {
                 .addOnCompleteListener{ task ->
                     if(task.isSuccessful){
                         Toast.makeText(this,"Password reset email sent", Toast.LENGTH_LONG).show()
-                        storeCodeInDatabase(email, randomCode)
+                       // storeCodeInDatabase(email, randomCode)
                         startActivity(Intent(this,VerifyAccount::class.java))
                         finish()
                     } else {

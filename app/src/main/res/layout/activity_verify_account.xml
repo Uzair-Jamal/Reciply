@@ -9,19 +9,6 @@
     tools:context="com.language.reciply.VerifyAccount"
     android:orientation="vertical">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@id/bottomBar"
-            android:layout_marginTop="20dp"
-
-            tools:ignore="ScrollViewCount,UselessParent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
                         <TextView
                             android:id="@+id/otp_tv"
                             android:layout_width="match_parent"
@@ -37,32 +24,29 @@
 
                             />
 
-                        <com.chaos.view.PinView
-                            android:id="@+id/otp_pinView"
-                            style="@style/PinWidget.PinView"
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:layout_below="@id/otp_tv"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="50dp"
-                            android:layout_marginEnd="20dp"
-                            android:elevation="10dp"
-                            android:inputType="number"
-                            android:itemBackground="#e6ebf2"
-                            android:text="5"
-                            android:textColor="#042628"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            app:itemHeight="60dp"
-                            app:itemRadius="10dp"
-                            app:itemSpacing="40dp"
-                            app:itemWidth="60dp"
-                            app:lineColor="#e6ebf2"
-                            app:viewType="rectangle" />
-                </LinearLayout>
-        </ScrollView>
+    <com.chaos.view.PinView
+        android:id="@+id/otp_pinView"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_below="@id/otp_tv"
+        android:layout_marginTop="54dp"
+        android:elevation="10dp"
+        android:inputType="number"
+        android:itemBackground="#e6ebf2"
+        android:text=""
+        android:textColor="#042628"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:itemHeight="60dp"
+        app:itemRadius="10dp"
+        app:itemSpacing="20dp"
+        app:itemWidth="60dp"
+        app:lineColor="#e6ebf2"
+        app:viewType="rectangle" />
 
-        <RelativeLayout
+    <RelativeLayout
             android:id="@+id/bottomBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
