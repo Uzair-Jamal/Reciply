@@ -1,4 +1,4 @@
-package com.language.reciply
+package com.food.recipely
 
 import org.junit.Test
 

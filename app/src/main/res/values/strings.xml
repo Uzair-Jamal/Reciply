@@ -2,4 +2,5 @@
     <string name="app_name">Reciply</string>
     <string name="terms_services">By continuing, you agree to the <font color="#042628">Terms of Services</font> &amp; <font color="#042628">Privacy Policy</font></string>
     <string name="resetEmail">Enter your email and we will send you a link to reset your password.</string>
+    <string name="googleSignInToken">769813469196-js1qeekc58o1irhud0gbfu1m9n2kukia.apps.googleusercontent.com</string>
 </resources>

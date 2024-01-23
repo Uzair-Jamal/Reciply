@@ -1,4 +1,4 @@
-package com.food.reciply
+package com.food.recipely
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,8 +8,8 @@ import android.widget.ImageView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.language.reciply.Login
-import com.language.reciply.SignUp
+import com.food.recipely.Login
+import com.food.reciply.R
 
 class SplashScreen : AppCompatActivity() {
     private lateinit var auth : FirebaseAuth

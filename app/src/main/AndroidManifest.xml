@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,19 +17,19 @@
         android:theme="@style/Theme.Reciply"
         tools:targetApi="31">
         <activity
-            android:name="com.language.reciply.VerifyAccount"
+            android:name="com.food.recipely.VerifyAccount"
             android:exported="false" />
         <activity
-            android:name="com.language.reciply.ForgetPassword"
+            android:name="com.food.recipely.ForgetPassword"
             android:exported="false" />
         <activity
-            android:name="com.language.reciply.Login"
+            android:name="com.food.recipely.Login"
             android:exported="false" />
         <activity
-            android:name="com.language.reciply.SignUp"
+            android:name="com.food.recipely.SignUp"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name="com.food.recipely.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +38,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.food.recipely.MainActivity"
             android:exported="true" />
     </application>
 

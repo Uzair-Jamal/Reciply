@@ -1,11 +1,9 @@
-package com.language.reciply
+package com.food.recipely
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.widget.Toast
-import com.food.reciply.R
 import com.food.reciply.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth

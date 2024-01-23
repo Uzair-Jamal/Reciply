@@ -1,4 +1,4 @@
-package com.food.reciply
+package com.food.recipely
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,7 +8,6 @@ import com.food.reciply.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.language.reciply.Login
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
