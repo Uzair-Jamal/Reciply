@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import androidx.core.app.NavUtils
 import com.food.reciply.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -20,13 +22,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         auth = Firebase.auth
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         binding.logoutBtn.setOnClickListener{
             signOut()
         }
         val emailAddress = auth.currentUser?.email
         binding.emailId.text = emailAddress
     }
-
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                // Handle the Up button click
+                NavUtils.navigateUpFromSameTask(this)
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
     private fun signOut(){
         auth.signOut()
         val intent = Intent(this, Login::class.java)

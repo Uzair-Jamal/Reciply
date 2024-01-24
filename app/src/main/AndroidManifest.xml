@@ -21,12 +21,14 @@
             android:exported="false" />
         <activity
             android:name="com.food.recipely.ForgetPassword"
+            android:parentActivityName="com.food.recipely.Login"
             android:exported="false" />
         <activity
             android:name="com.food.recipely.Login"
             android:exported="false" />
         <activity
             android:name="com.food.recipely.SignUp"
+            android:parentActivityName="com.food.recipely.Login"
             android:exported="false" />
         <activity
             android:name="com.food.recipely.SplashScreen"
@@ -39,7 +41,11 @@
         </activity>
         <activity
             android:name="com.food.recipely.MainActivity"
+            android:parentActivityName="com.food.recipely.Login"
             android:exported="true" />
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
     </application>
 
 </manifest>

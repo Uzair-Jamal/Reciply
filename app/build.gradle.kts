@@ -45,6 +45,10 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("io.github.chaosleung:pinview:1.4.4")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation ("com.facebook.android:facebook-login:8.1.0")
+    implementation ("com.facebook.android:facebook-core:8.1.0")
+    implementation ("com.facebook.android:facebook-android-sdk:8.1.0")
+
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
