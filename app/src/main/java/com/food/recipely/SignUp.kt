@@ -1,8 +1,10 @@
 package com.food.recipely
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import com.food.reciply.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -20,6 +22,7 @@ class SignUp : AppCompatActivity() {
         setContentView(binding.root)
         auth = Firebase.auth
 
+
         binding.signupBtn.setOnClickListener {
             val email = binding.email.text.toString()
             val password = binding.password.text.toString()
@@ -27,8 +30,8 @@ class SignUp : AppCompatActivity() {
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful){
+                        supportActionBar?.setDisplayHomeAsUpEnabled(true)
                         startActivity(Intent(this,Login::class.java))
-                        finish()
                     }
                     else {
                         Toast.makeText(

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -15,21 +16,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Reciply"
-        tools:targetApi="31">
+        tools:targetApi="33">
+        <activity
+            android:name="com.food.recipely.Interest"
+            android:exported="false" />
         <activity
             android:name="com.food.recipely.VerifyAccount"
             android:exported="false" />
         <activity
             android:name="com.food.recipely.ForgetPassword"
+            android:exported="false"
             android:parentActivityName="com.food.recipely.Login"
-            android:exported="false" />
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.food.recipely.Login"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.food.recipely.SignUp"
+            android:exported="false"
             android:parentActivityName="com.food.recipely.Login"
-            android:exported="false" />
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.food.recipely.SplashScreen"
             android:exported="true">
@@ -41,11 +48,16 @@
         </activity>
         <activity
             android:name="com.food.recipely.MainActivity"
+            android:exported="true"
             android:parentActivityName="com.food.recipely.Login"
-            android:exported="true" />
+            android:windowSoftInputMode="adjustResize" />
 
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
-        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
     </application>
 
 </manifest>

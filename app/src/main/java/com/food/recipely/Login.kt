@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
+import android.view.View
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
@@ -33,6 +36,15 @@ class Login<AccessToken> : AppCompatActivity() {
         setContentView(binding.root)
         auth = FirebaseAuth.getInstance()
 
+        binding.emailAddress.requestFocus()
+        binding.password.requestFocus()
+
+        val imm1 = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        imm1.showSoftInput(binding.emailAddress, InputMethodManager.SHOW_IMPLICIT)
+
+        val imm2 = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        imm2.showSoftInput(binding.password, InputMethodManager.SHOW_IMPLICIT)
+
         binding.newUser.setOnClickListener{
             startActivity(Intent(this, SignUp::class.java))
             finish()
@@ -52,7 +64,7 @@ class Login<AccessToken> : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Authentication successful, navigate to the main activity
-                            startActivity(Intent(this, MainActivity::class.java))
+                            startActivity(Intent(this, Interest::class.java))
                             finish()
                         } else {
                             // Authentication failed

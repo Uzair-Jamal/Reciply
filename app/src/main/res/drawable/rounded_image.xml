@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                <corners android:radius="50dp"/>
+                <solid
+                    android:color="@color/white"
+                    android:src="@drawable/done_icon"/>
+                <stroke
+                    android:width = "2dp"
+                    android:color="@android:color/transparent"
+                     />
+                </shape>
+            </item>
+
+<!--            <item-->
+<!--                android:right="8dp"-->
+<!--                android:top="8dp"-->
+<!--                android:bottom="8dp">-->
+
+<!--                <bitmap-->
+<!--                    android:src="@drawable/done_icon"-->
+<!--                    android:tint="#90FFFFFF"-->
+<!--                    />-->
+<!--            </item>-->
+
+        </layer-list>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+        <corners android:radius="20dp"/>
+        <solid android:color="#e6ebf2"/>
+        <stroke
+            android:width = "2dp"
+            android:color="@android:color/transparent"
+             />
+        </shape>
+    </item>
+</selector>

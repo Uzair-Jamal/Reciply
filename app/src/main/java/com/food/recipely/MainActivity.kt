@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         auth = Firebase.auth
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         binding.logoutBtn.setOnClickListener{
             signOut()
         }
